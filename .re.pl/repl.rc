@@ -1,0 +1,20 @@
+use strict;
+use warnings;
+
+use feature 'say';
+
+use Data::Dumper qw( Dumper );
+use Class::Inspector;
+use Module::Refresh;
+use Devel::Size;
+use File::Slurp qw();
+
+binmode STDIN, ":encoding(UTF-8)";
+binmode STDOUT, ":encoding(UTF-8)";
+
+sub pp
+{
+    print( Dumper(\@_) );
+}
+
+puts "Repl control file loaded";
