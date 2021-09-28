@@ -50,6 +50,11 @@ function portclosetcp {
     sudo iptables -I INPUT -p tcp -m tcp --dport $1 -j REJECT
 }
 
+function whatismyip {
+    # curl --silent checkip.dyndns.org 2>&1 |perl -e 'local $\; print( ( /<body>(.*)<\/body>/si ? $1 : "Not found" ), "\n")';
+    curl --silent checkip.dyndns.org 2>&1 |perl -e 'local $\; print <> =~ /<body>(.*)<\/body>/si ? $1 : "Not found", "\n";';
+}
+
 #
 # Setup utility aliases
 #
