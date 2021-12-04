@@ -10,7 +10,7 @@ Create a `.homegit` Git folder
 
 Create an alias `homegit` you don't need to type it all over again
 
-    alias homegit='/usr/bin/env git --git-dir=$HOME/Document/.homegit/ --work-tree=$HOME'
+    alias homegit='/usr/bin/env git --git-dir=$HOME/Documents/.homegit/ --work-tree=$HOME'
 
 Set Git status to hide untracked files
 
@@ -22,7 +22,7 @@ Add a `.gitignore` in `$HOME`
 
 Add the alias to `.bashrc` so you can use it later
 
-    echo "alias homegit='/usr/bin/env git --git-dir=$HOME/Document/.homegit/ --work-tree=$HOME'" >> $HOME/.bashrc
+    echo "alias homegit='/usr/bin/env git --git-dir=$HOME/Documents/.homegit/ --work-tree=$HOME'" >> $HOME/.bashrc
 
 ## Usage examples
 
@@ -46,11 +46,10 @@ Push
 
 Clone repo
 
-    git clone --bare https://github.com/jbourlakos/homegit.git $HOME/Documents/.dotfiles
-
+    git clone --bare https://github.com/jbourlakos/homegit.git $HOME/Documents/.homegit
 Define alias
 
-    alias homegit='/usr/bin/env git --git-dir=$HOME/Document/.homegit/ --work-tree=$HOME'
+    alias homegit='/usr/bin/env git --git-dir=$HOME/Documents/.homegit/ --work-tree=$HOME'
 
 Initial checkout
 
