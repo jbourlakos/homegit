@@ -2,4 +2,5 @@ source $HOME/.bashrc.d/perl.bash
 source $HOME/.bashrc.d/git.bash
 source $HOME/.bashrc.d/user.bash
 source $HOME/.bashrc.d/tmux.bash
+source $HOME/.bashrc.d/asdf.bash
 source $HOME/.bashrc.d/dev.bash
