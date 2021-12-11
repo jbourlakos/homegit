@@ -17,6 +17,12 @@
 # Perl
 #
 
+# Perlbrew
+if [ -f ~/perl5/perlbrew/etc/bashrc ]; then
+    source ~/perl5/perlbrew/etc/bashrc
+fi
+
+
 function pm-check {
     git diff --name-only --diff-filter=ACRM master... | grep -P '\.p[lm]' |xargs -r -I{} sh -c 'perlcritic || true';
 }

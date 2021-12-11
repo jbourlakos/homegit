@@ -8,26 +8,6 @@
 # export LC_CTYPE="en_US.UTF-8";
 
 #
-# Setup home bin directory
-#
-
-if [ -d ~/bin ]; then
-    export PATH="~/bin:$PATH"
-fi
-
-#
-# Setup home tmp directory
-#
-
-if [ ! -d /tmp/user/$USER ]; then
-    mkdir -p /tmp/user/$USER
-fi
-
-if [ ! -e $HOME/tmp ]; then
-    ln -s /tmp/user/$USER $HOME/tmp
-fi
-
-#
 # Setup command line prompt
 #
 
