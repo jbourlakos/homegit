@@ -49,21 +49,25 @@ function whatismyip {
 }
 
 function gg {
-    if command -v perl >/dev/null 2>&1; then
-        grep_cmd="grep -P"
-    else
-        grep_cmd="grep"
-    fi
+    # default grep command
+    grep_cmd="grep"
 
+    # if git available then "git grep"
     if command -v git >/dev/null 2>&1; then
         if git rev-parse --git-dir >/dev/null 2>&1; then
-            git "$grep_cmd" "$@"
-        else
-            "$grep_cmd" "$@"
+            grep_cmd="git grep"
         fi
-    else
-        "$grep_cmd" "$@"
     fi
+
+    #default grep opts
+    grep_opts="-n"
+
+    # if perl available use PCRE mode
+    if command -v perl >/dev/null 2>&1; then
+        grep_opts="${grep_opts} -P"
+    fi
+
+    ${grep_cmd} ${grep_opts} $@
 }
 
 #
