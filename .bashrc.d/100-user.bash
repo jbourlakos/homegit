@@ -67,7 +67,7 @@ function gg {
         grep_opts="${grep_opts} -P"
     fi
 
-    ${grep_cmd} ${grep_opts} $@
+    ${grep_cmd} ${grep_opts} "$@"
 }
 
 #

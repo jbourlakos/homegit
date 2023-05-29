@@ -1,8 +1,5 @@
 [core]
 	editor = vim
-[user]
-	name = Ioannis Bourlakos
-	email = jbourlakos@gmail.com
 [alias]
 	ci = commit
 	co = checkout
